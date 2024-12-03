@@ -1,0 +1,295 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-right: 20px;
+
+        a {
+          color: #333;
+          text-decoration: none;
+
+          &:hover {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+
+  .login {
+    a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 1px solid #333;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+
+  .heroContent {
+    flex: 1;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      .btnPrimary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .btnSecondary {
+        background-color: transparent;
+        color: #007bff;
+        border: 1px solid #007bff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #007bff;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .heroImage {
+    flex: 1;
+    text-align: right;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.popularCourses {
+  margin: 80px 0;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+
+  .courseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+  }
+}
+
+.services {
+  margin: 80px 0;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .serviceList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+
+    .serviceItem {
+      img {
+        max-width: 50px;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .btnLearnMore {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.testimonials {
+  margin: 80px 0;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .testimonialGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+  }
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 20px 0;
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-left: 20px;
+
+          a {
+            color: #333;
+            text-decoration: none;
+
+            &:hover {
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .nav {
+      margin-top: 20px;
+    }
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+
+    .heroContent {
+      margin-bottom: 40px;
+    }
+
+    .heroImage {
+      text-align: center;
+    }
+  }
+
+  .popularCourses {
+    .courseGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .services {
+    .serviceList {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .testimonials {
+    .testimonialGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer {
+    .footerContent {
+      flex-direction: column;
+      text-align: center;
+
+      nav {
+        margin-top: 20px;
+
+        ul {
+          flex-direction: column;
+          align-items: center;
+
+          li {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
